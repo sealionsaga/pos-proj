@@ -34,7 +34,7 @@ export default function ProductsPage() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (editingProduct) {
-      await updateProduct({ id: editingProduct._id as any, ...formData });
+      await updateProduct({ id: editingProduct._id as Id<"products">, ...formData });
       setEditingProduct(null);
     } else {
       await createProduct(formData);
