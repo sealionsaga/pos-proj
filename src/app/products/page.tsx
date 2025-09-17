@@ -41,6 +41,7 @@ export default function ProductsPage() {
       setIsAddDialogOpen(false);
     }
     setFormData({ name: "", description: "", price: 0, stock: 0, category: "", image: "" });
+  };
 
   const handleEdit = (product: Product) => {
     setEditingProduct(product);
